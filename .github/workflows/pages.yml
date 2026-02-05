@@ -20,7 +20,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: babashka/setup-babashka@v1
+      # babashka/setup-babashka no longer resolves on GitHub Actions (repo removed/renamed).
+      # Use the community-maintained setup action instead.
+      - uses: turtlequeue/setup-babashka@v1
         with:
           babashka-version: "1.12.214"
 
@@ -50,4 +52,3 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
-
