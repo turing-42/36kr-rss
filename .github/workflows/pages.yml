@@ -3,7 +3,7 @@ name: Build and Deploy to GitHub Pages
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "0 9 * * *"
+    - cron: "30 21 * * *"
 
 permissions:
   contents: read
